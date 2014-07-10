@@ -3,6 +3,7 @@ TOOLCHAIN="/home/shivam/development/toolchains/linaro-4.8-generic/bin/arm-gnueab
 MODULES_DIR="/home/shivam/development/modules"
 ZIMAGE="/home/shivam/development/android_kernel_mototola_msm8226/arch/arm/boot/zImage-dtb"
 KERNEL_DIR="/home/shivam/development/android_kernel_mototola_msm8226"
+BUILD_START=$(date +"%s")
 if [ -a $ZIMAGE ];
 then
 rm $ZIMAGE
@@ -19,6 +20,9 @@ cd $MODULES_DIR
 echo "Stripping modules for size"
 $TOOLCHAIN-strip --strip-unneeded *.ko
 cd $KERNEL_DIR
+BUILD_END=$(date +"%s")
+DIFF=$(($BUILD_END - $BUILD_START))
+echo "Build completed in $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds."
 else
 echo "Compilation failed! Fix the errors!"
 fi
