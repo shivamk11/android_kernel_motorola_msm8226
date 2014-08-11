@@ -310,7 +310,6 @@ static void dt2w_late_resume(struct power_suspend *h) {
 }
 
 static struct power_suspend dt2w_early_suspend_handler = {
-	.level = EARLY_SUSPEND_LEVEL_BLANK_SCREEN,
 	.suspend = dt2w_early_suspend,
 	.resume = dt2w_late_resume,
 };
