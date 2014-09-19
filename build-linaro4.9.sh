@@ -26,7 +26,7 @@ cd $KERNEL_DIR
 $DTBTOOL -o dt.img -s 2048 -p scripts/dtc/ arch/arm/boot/
 $MKBOOTFS ramdisk/ > $KERNEL_DIR/ramdisk.cpio
 cat $KERNEL_DIR/ramdisk.cpio | gzip > $KERNEL_DIR/root.fs
-$MKBOOTIMG --kernel $ZIMAGE --ramdisk $KERNEL_DIR/root.fs --base 0x00000000 --cmdline "console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 zcache" --pagesize 2048 --dt dt.img -o $KERNEL_DIR/boot.img
+$MKBOOTIMG --kernel $ZIMAGE --ramdisk $KERNEL_DIR/root.fs --base 0x00000000 --cmdline "console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0" --pagesize 2048 --dt dt.img -o $KERNEL_DIR/boot.img
 BUILD_END=$(date +"%s")
 DIFF=$(($BUILD_END - $BUILD_START))
 echo "Build completed in $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds."
