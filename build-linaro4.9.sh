@@ -1,7 +1,7 @@
 #!/bin/bash
 TOOLCHAIN="/home/shivam/development/toolchains/linaro-4.9/bin/arm-eabi"
 MODULES_DIR="/home/shivam/development/modules"
-ZIMAGE="/home/shivam/development/android_kernel_mototola_msm8226/arch/arm/boot/zImage-dtb"
+ZIMAGE="/home/shivam/development/android_kernel_mototola_msm8226/arch/arm/boot/zImage"
 KERNEL_DIR="/home/shivam/development/android_kernel_mototola_msm8226"
 MKBOOTIMG="/home/shivam/boot-tools-falcon/tools/mkbootimg"
 MKBOOTFS="/home/shivam/boot-tools-falcon/tools/mkbootfs"
