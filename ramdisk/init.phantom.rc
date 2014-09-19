@@ -1,0 +1,6 @@
+# Phantom Extras
+
+service phantom-sh /system/bin/sh /init.phantom.sh
+	class late_start
+	user root
+	oneshot
