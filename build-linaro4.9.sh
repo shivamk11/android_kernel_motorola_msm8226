@@ -1,5 +1,5 @@
 #!/bin/bash
-TOOLCHAIN="/home/shivam/development/toolchains/linaro-4.9-generic/bin/arm-eabi"
+TOOLCHAIN="/home/shivam/development/toolchains/linaro-4.9/bin/arm-eabi"
 MODULES_DIR="/home/shivam/development/modules"
 ZIMAGE="/home/shivam/development/android_kernel_mototola_msm8226/arch/arm/boot/zImage-dtb"
 KERNEL_DIR="/home/shivam/development/android_kernel_mototola_msm8226"
