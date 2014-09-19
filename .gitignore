@@ -86,3 +86,8 @@ GTAGS
 \#*#
 
 arch/arm/mach-msm/smd_rpc_sym.c
+
+ramdisk.cpio
+dt.img
+boot.img
+root.fs
